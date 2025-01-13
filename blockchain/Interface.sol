@@ -14,8 +14,7 @@ contract Interface {
              revert("voter already registered");
             }
 }  
-   // 0x070D2BCe3d224d318496cDF52b1ECA06cCceb171
-   // 
+   
 
         Voter v= new Voter(msg.sender);
         voters.push(v);
@@ -27,9 +26,7 @@ contract Interface {
         return address(e);
 
      }
-     // 0x8016C461C198d4162F1115A8e3B949Bf53C79cCB
-     // 0x0ce7FE7cf2ef266Eb8a53702dD97c1D60Bc36519
-
+    
 
      function addCandidate(address election) public returns (address) {
         Candidate c= new Candidate(election);
@@ -46,8 +43,7 @@ contract Interface {
        e.setVote(candidate);
       return true;
 
-         // 0x528ea66286414F28E3154Ba5B9c7dE47a197c86F
-         //  0xcf1c2d6b8282639C6A1f21754AB703Aa0931DD2B  0xc55fD61B2e05D675074Ac4d2B0F4184c2871BDED
+   
      }
      function getResult(address election ) public view returns (address candidate , uint votes) {
          Election e= Election(election);
@@ -82,7 +78,7 @@ contract Interface {
             found= true;
             break;
 
-         }   // 0xb9c68FBA0FC33C7743B54EA72fE9eFdf3060B751   0xEF0A530DE77d7A0c9Ab69c9E7779deA0812eef64
+         }   
       }
       if (!found){
             revert("your candidate has not registered for given election");
